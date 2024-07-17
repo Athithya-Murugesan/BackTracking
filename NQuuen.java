@@ -74,3 +74,36 @@ class Solution{
         return res;
     }
 }
+
+
+
+// //Recursion tree
+// solveNQ(0, 4) - Start at row 0
+// |
+// |-- solveNQ(1, 3) - Place queen at (0, 0)
+// |   |
+// |   |-- solveNQ(2, 2) - Place queen at (1, 2)
+// |   |   |
+// |   |   |-- solveNQ(3, 1) - Place queen at (2, 1)
+// |   |   |   |
+// |   |   |   |-- solveNQ(4, 0) - Place queen at (3, 3), Solution found: [1, 3, 2, 4]
+// |   |   |
+// |   |   |-- Backtrack
+// |   |
+// |   |-- Backtrack
+// |
+// |-- solveNQ(1, 3) - Place queen at (0, 1)
+// |   |
+// |   |-- solveNQ(2, 2) - Place queen at (1, 3)
+// |   |   |
+// |   |   |-- solveNQ(3, 1) - Place queen at (2, 0)
+// |   |   |   |
+// |   |   |   |-- solveNQ(4, 0) - Place queen at (3, 2), Solution found: [2, 4, 1, 3]
+// |   |   |
+// |   |   |-- Backtrack
+// |   |
+// |   |-- Backtrack
+// |
+// |-- solveNQ(1, 3) - Place queen at (0, 2)
+// |
+// |-- solveNQ(1, 3) - Place queen at (0, 3)
