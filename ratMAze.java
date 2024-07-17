@@ -72,3 +72,30 @@ public class Main {
 
         return true;
     }
+
+
+
+// Recursion Tree
+
+// helper(0, 0)
+// |
+// |-- helper(0, 1) - Move 1 step right
+// |   |
+// |   |-- helper(0, 2) - Move 1 step right (blocked, returns false)
+// |   |-- helper(1, 1) - Move 1 step down
+// |       |
+// |       |-- helper(1, 2) - Move 1 step right (blocked, returns false)
+// |       |-- helper(2, 1) - Move 1 step down
+// |           |
+// |           |-- helper(2, 2) - Reached destination, returns true
+// |
+// |-- helper(1, 0) - Move 1 step down
+//     |
+//     |-- helper(1, 1) - Move 1 step down
+//         |
+//         |-- helper(1, 2) - Move 1 step right (blocked, returns false)
+//         |-- helper(2, 1) - Move 1 step down
+//             |
+//             |-- helper(2, 2) - Reached destination, returns true
+
+
